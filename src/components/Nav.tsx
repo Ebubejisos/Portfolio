@@ -1,6 +1,6 @@
 const Nav = () => {
 	return (
-		<nav>
+		<nav className='nav-bar'>
 			<ul className='nav-list'>
 				<li>
 					<a href='#'>
