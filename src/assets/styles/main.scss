@@ -1,0 +1,61 @@
+@use './variables.scss' as *;
+body {
+  background: $white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+// HEADER STYLES
+.header {
+  background-image: url(../images/stones.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.header-container nav ul {
+  background-color: inherit;
+  list-style-type: none;
+
+  li {
+    float: left;
+    text-transform: uppercase;
+  }
+}
+
+.nav-list a {
+  display: flex;
+  padding: 14px 10px;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.search-bar {
+  padding: 14px 0px;
+  font-size: 0.8em;
+  input {
+    background-image: url(../icons/magnify.svg);
+    background-position: 1px 1px;
+    background-repeat: no-repeat;
+    padding-left: 26px;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+  }
+  button {
+    background-color: #bef9be;
+    color: $black;
+    margin-left: -2px;
+    padding: 0px 5px;
+    cursor: pointer;
+  }
+}
+
