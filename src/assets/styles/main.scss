@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   font-family: 'Times New Roman', Times, serif;
   color: #686868;
+  text-align: center;
 }
 
 // HEADER STYLES
@@ -50,8 +51,9 @@ body {
   display: flex;
   padding: 14px 10px;
   text-decoration: none;
-  text-align: center;
+  
   color: inherit;
+  transition: background-color 0.4s ease-out;
   &:hover{
     background-color: $primary;
   }
@@ -97,19 +99,18 @@ body {
   padding: 90px 10px 0px 10px;
 
   h1 {
-    text-align: center;
     text-transform: uppercase;
   }
 }
 .carousel {
-  padding: 20px;
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
   gap: 35px;
-  figure img {
-    width: 100%;
+  p.about-me{
+    text-align: left;
   }
-  figure figcaption {
+  figure .fig-name {
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -117,13 +118,51 @@ body {
       width: 20px;
       height: 20px;
     }
-    span {
-      font-weight: 600;
-    }
   }
 }
 .carousel figure {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
+  img {
+    width: 100%;
+  }
+  .figcaption p {
+    margin-top: 15px;
+  }
+}
+
+.core-skills {
+  padding-top: 40px;
+}
+.core-skills .skill-list {
+  margin-top: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  li {
+    display: flex;
+    flex-direction: column;
+    h4{
+      font-weight: lighter;
+      letter-spacing: 3px;
+    }
+    div.progress-bar-container {
+    background-color: $secondary;
+    }
+    div.progress-bar {
+      background-color: $black;
+      min-height: 30px;
+      padding: 5px 0px;
+    }
+  }
+}
+.skill-list .skill-name {
+  display: flex;
+  gap: 8px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
 }
