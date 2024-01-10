@@ -1,4 +1,15 @@
 @use './variables.scss' as *;
+
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $white;
   font-size: 18px;
@@ -20,6 +31,7 @@ body {
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 1000;
   color: #e1e1e1;
 }
 .scroll-animation {
@@ -70,6 +82,7 @@ body {
   padding: 14px 0px;
   font-size: 0.8em;
   margin-right: 5px;
+  height: fit-content;
   display: flex;
   input {
     background-image: url(../icons/magnify.svg);
@@ -123,12 +136,12 @@ body {
 .carousel figure {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   img {
+    border-radius: 5px;
     width: 100%;
   }
   .figcaption p {
-    margin-top: 15px;
+    margin: 15px 0;
   }
 }
 
@@ -151,13 +164,23 @@ body {
     div.progress-bar-container {
     background-color: $secondary;
     }
-    div.progress-bar {
-      background-color: $black;
-      min-height: 30px;
-      padding: 5px 0px;
-    }
   }
 }
+div.progress-bar {
+  background-color: $black;
+  p {
+    opacity: 0;
+    color: $white;
+    text-align: center;
+    transition: opacity 0.2s ease-in;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  min-height: 30px;
+  padding: 5px 0px;
+}
+
 .skill-list .skill-name {
   display: flex;
   gap: 8px;

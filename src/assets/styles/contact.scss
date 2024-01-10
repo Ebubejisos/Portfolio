@@ -1,0 +1,130 @@
+@use './variables.scss' as *;
+
+.contact-section{
+  padding-top: 40px;
+}
+.contact-bg-img {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  background-image: url('../images/stones.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.83em;
+    font-weight: 300;
+    letter-spacing: 10px;
+  }
+}
+
+.contact-header {
+  margin-top: 60px;
+  p {
+    margin: 15px 0px;
+  }
+  hr {
+    margin: 40px 0px;
+    opacity: .4;
+  }
+}
+
+.contact-detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 40px;
+  .residence-img {
+    border-radius: 10px;
+    max-width: 300px;
+  }
+}
+ul.contact-info-list{
+  list-style-type: none;
+  margin: 15px 0;
+  li {
+    display: flex;
+    gap: 8px;
+    padding: 5px 0px;
+  }
+}
+li.contact img{
+  width: 20px;
+  height: 20px;
+}
+
+.right-content .message-me {
+  padding-top: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  p {
+    text-align: left;
+  }
+}
+
+.message-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  input[type=text],input[type=email] {
+    width: 250px;
+    height: fit-content;
+    &:focus {
+      border: none;
+      border-bottom: 2px solid $secondary;
+    }
+  }
+  textarea {
+    flex:100%
+  }
+  input, textarea {
+    outline: none;
+    padding: 10px ;
+    border: 1px solid $secondary;
+    color: inherit;
+  }
+}
+
+.message-form button {
+  padding: 15px;
+  height: fit-content;
+  background-color: #090909;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.75;
+    font-size: .95em;
+  }
+  div {
+    display: flex;
+    gap: 5px;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+    span {
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+  
+}
