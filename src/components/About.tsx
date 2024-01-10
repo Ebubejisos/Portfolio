@@ -46,7 +46,7 @@ const About = () => {
 	];
 
 	return (
-		<section className='about-section'>
+		<section className='about-section' id='about'>
 			<h1>About</h1>
 			<div className='carousel'>
 				<figure>
@@ -75,10 +75,9 @@ const About = () => {
 								<h4>{skill.name}:</h4>
 							</div>
 							<div className='progress-bar-container'>
-								<div
-									className='progress-bar'
-									style={{ width: skill.level }}
-								></div>
+								<div className='progress-bar' style={{ width: skill.level }}>
+									<p>{skill.level}</p>
+								</div>
 							</div>
 						</li>
 					))}

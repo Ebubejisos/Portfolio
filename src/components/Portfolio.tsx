@@ -1,5 +1,5 @@
 const Portfolio = () => {
-	return <div>Portfolio</div>;
+	return <div id='portfolio'>Portfolio</div>;
 };
 
 export default Portfolio;

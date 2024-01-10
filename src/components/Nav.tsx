@@ -9,19 +9,19 @@ const Nav = () => {
 					</a>
 				</li>
 				<li>
-					<a href='#'>
+					<a href='#about'>
 						<img src='./src/assets/icons/account-circle.svg' alt='' />
 						<span>About</span>
 					</a>
 				</li>
 				<li>
-					<a href='#'>
+					<a href='#portfolio'>
 						<img src='./src/assets/icons/dots-grid.svg' alt='' />
 						<span>Portfolio</span>
 					</a>
 				</li>
 				<li>
-					<a href='#'>
+					<a href='#contact'>
 						<img src='./src/assets/icons/email.svg' alt='' />
 						<span>Contact</span>
 					</a>
