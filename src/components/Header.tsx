@@ -1,4 +1,5 @@
 import { FormEventHandler, useState, useEffect } from 'react';
+
 import Nav from './Nav';
 
 const Header = () => {
@@ -34,6 +35,8 @@ const Header = () => {
 				className={`header-container ${isScrolled ? 'scroll-animation' : ''}`}
 			>
 				<Nav />
+				{/* Mobile Hamburger Menu */}
+
 				<form action='#' className='search-bar' onSubmit={handleSubmit}>
 					<input
 						type='text'
