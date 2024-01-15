@@ -109,9 +109,11 @@ body {
 .about-section {
   max-width: 1000px;
   margin: 0 auto;
+  // background-color: $secondary;
   padding: 90px 10px 0px 10px;
 
   h1 {
+    // background-color: $white;
     text-transform: uppercase;
   }
 }
@@ -162,7 +164,7 @@ body {
       letter-spacing: 3px;
     }
     div.progress-bar-container {
-    background-color: $secondary;
+    background-color: #e0e0e0;;
     }
   }
 }
