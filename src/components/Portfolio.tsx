@@ -1,6 +1,13 @@
 import { projects } from '../utils/projects';
 import '../assets/styles/portfolio.scss';
+import { useEffect } from 'react';
+
+import { openLinksInNewTab } from '../utils/functions';
+
 const Portfolio = () => {
+	useEffect(() => {
+		openLinksInNewTab('.portfolio-section');
+	}, []);
 	return (
 		<section id='portfolio' className='portfolio-section'>
 			<h1>Portfolio</h1>

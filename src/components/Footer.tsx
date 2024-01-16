@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
 import '../assets/styles/footer.scss';
+import { openLinksInNewTab } from '../utils/functions';
 
 const Footer = () => {
+	useEffect(() => {
+		openLinksInNewTab('.footer');
+	}, []);
+
 	return (
 		<footer className='footer'>
 			<div>
