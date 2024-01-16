@@ -10,11 +10,11 @@ const Contact = () => {
 
 	return (
 		<section className='contact-section'>
-			<div className='contact-bg-img'>
+			<div id='contact' className='contact-bg-img'>
 				<p>Contact</p>
 			</div>
 			<div className='contact-header'>
-				<h1 id='contact'>Contact Me</h1>
+				<h1>Contact Me</h1>
 				<p>Here's is how you can reach me</p>
 				<hr />
 			</div>
