@@ -85,6 +85,14 @@ li.contact img{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  input, textarea {
+    outline: none;
+    padding: 10px ;
+    border: 1px solid $secondary;
+    color: inherit;
+  }
+
   input[type=text],input[type=email] {
     width: 250px;
     height: fit-content;
@@ -94,13 +102,7 @@ li.contact img{
     }
   }
   textarea {
-    flex:100%
-  }
-  input, textarea {
-    outline: none;
-    padding: 10px ;
-    border: 1px solid $secondary;
-    color: inherit;
+    flex-basis: 100%;
   }
 }
 
@@ -118,8 +120,8 @@ li.contact img{
     display: flex;
     gap: 5px;
     img {
-      width: 18px;
-      height: 18px;
+      width: 1.1em;
+      height: 1.1em;
     }
     span {
       text-transform: uppercase;
@@ -127,4 +129,14 @@ li.contact img{
     }
   }
   
+}
+
+@media screen and (max-width: 720px) {
+  .contact-detail-container{
+    @include flex(column, 20px)
+  }
+  .contact-info-list {
+    @include flex(column, 2px);
+    align-items: center;
+  }
 }

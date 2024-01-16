@@ -10,3 +10,9 @@ $greenishBlue : #00DDFF;
 $blue : #238aeb;
 $green : #7aff58;
 $font-stack: Helvetica, sans-serif;
+
+@mixin flex($direction,$pixel){
+  display: flex;
+  flex-direction: $direction;
+  gap: $pixel;
+}
