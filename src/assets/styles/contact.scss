@@ -89,7 +89,7 @@ li.contact img{
   input, textarea {
     outline: none;
     padding: 10px ;
-    border: 1px solid $secondary;
+    border: 1px solid $primary;
     color: inherit;
   }
 
@@ -103,6 +103,7 @@ li.contact img{
   }
   textarea {
     flex-basis: 100%;
+    resize: vertical;
   }
 }
 

@@ -221,6 +221,10 @@ div.progress-bar {
   :root {
     --font-size: 12px;
   }
+
+  .header nav ul {
+    display: none;
+  }
   
   // ABOUT SECTION STYLES
   .carousel {

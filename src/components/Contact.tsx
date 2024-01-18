@@ -66,7 +66,7 @@ const Contact = () => {
 								name=''
 								className=''
 								cols={30}
-								rows={10}
+								rows={7}
 								aria-label='sender message'
 								placeholder='Message'
 								value={message}

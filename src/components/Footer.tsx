@@ -4,7 +4,7 @@ import { openLinksInNewTab } from '../utils/functions';
 
 const Footer = () => {
 	useEffect(() => {
-		openLinksInNewTab('.footer');
+		openLinksInNewTab('.social-media-links', '.reference-lists');
 	}, []);
 
 	return (
