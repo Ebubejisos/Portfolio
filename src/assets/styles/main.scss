@@ -71,16 +71,18 @@ body {
   
   color: inherit;
   transition: background-color 0.4s ease-out;
+
+  svg {    
+    width: 1.12em;
+    height: calc(var(--font-size) * 1.12);//same with above method
+    transition: fill 400ms ease-in-out;
+  }
+
   &:hover{
     background-color: $primary;
   }
-  &:active {
-    border-bottom: 2px $white solid;
-  }
-
-  img {
-    width: 1.12em;
-    height: calc(var(--font-size) * 1.12);//same with above method
+  &:hover svg {
+    fill: $white;
   }
 }
 .search-bar {
