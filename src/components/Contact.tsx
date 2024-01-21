@@ -1,5 +1,9 @@
 import { FormEventHandler, useState } from 'react';
 import '../../public/assets/styles/contact.scss';
+
+/// <reference types="vite-plugin-svgr/client" />
+import SendIcon from '../../public/assets/icons/send.svg?react';
+
 const Contact = () => {
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
@@ -21,7 +25,7 @@ const Contact = () => {
 			<div className='contact-detail-container'>
 				<div className='left-content'>
 					<img
-						src='src/assets/images/stones.jpg'
+						src='assets/images/stones.jpg'
 						alt='my location image'
 						className='residence-img'
 					/>
@@ -29,15 +33,15 @@ const Contact = () => {
 				<div className='right-content'>
 					<ul className='contact-info-list'>
 						<li className='contact'>
-							<img src='src/assets/icons/map-marker.svg' alt='' />
+							<img src='assets/icons/map-marker.svg' alt='' />
 							<span>Anambra, Nigeria</span>
 						</li>
 						<li className='contact'>
-							<img src='src/assets/icons/phone.svg' alt='' />
+							<img src='assets/icons/phone.svg' alt='' />
 							<span>Phone: +234 90 6615 0628</span>
 						</li>
 						<li className='contact'>
-							<img src='src/assets/icons/email.svg' alt='' />
+							<img src='assets/icons/email.svg' alt='' />
 							<span>Email: anosykegideon@gmail.com</span>
 						</li>
 					</ul>
@@ -74,7 +78,7 @@ const Contact = () => {
 							></textarea>
 							<button type='submit' aria-label='Send message'>
 								<div>
-									<img src='src/assets/icons/send.svg' alt='' />
+									<SendIcon />
 									<span>Send Message</span>
 								</div>
 							</button>

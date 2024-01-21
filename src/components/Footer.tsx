@@ -1,4 +1,8 @@
 import { useEffect } from 'react';
+
+/// <reference types="vite-plugin-svgr/client" />
+import GithubIcon from '../../public/assets/icons/github.svg?react';
+
 import '../../public/assets/styles/footer.scss';
 import { openLinksInNewTab } from '../utils/functions';
 
@@ -57,7 +61,7 @@ const Footer = () => {
 			</ul>
 			<div className='copyrights'>
 				<p>Copyright &#169; Gideon Anosike</p>
-				<img src='src/assets/icons/github.svg' alt='' />
+				<GithubIcon />
 			</div>
 		</footer>
 	);
