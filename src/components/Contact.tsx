@@ -1,5 +1,5 @@
 import { FormEventHandler, useState } from 'react';
-import '../assets/styles/contact.scss';
+import '../../public/assets/styles/contact.scss';
 const Contact = () => {
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');

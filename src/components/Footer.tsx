@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import '../assets/styles/footer.scss';
+import '../../public/assets/styles/footer.scss';
 import { openLinksInNewTab } from '../utils/functions';
 
 const Footer = () => {

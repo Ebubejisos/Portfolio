@@ -1,5 +1,5 @@
 import { projects } from '../utils/projects';
-import '../assets/styles/portfolio.scss';
+import '../../public/assets/styles/portfolio.scss';
 import { useEffect } from 'react';
 
 import { openLinksInNewTab } from '../utils/functions';
