@@ -9,12 +9,12 @@ const About = () => {
 					<figure>
 						<figcaption className='figcaption'>
 							<div className='fig-name'>
-								<img src='/src/assets/icons/account-25.svg' alt='' />
+								<img src='./src/assets/icons/account-25.svg' alt='' />
 								<h3>Gideon Anosike</h3>
 							</div>
 							<p>Web Developer and Affliate Pharmacist</p>
 						</figcaption>
-						<img src='/src/assets/images/stones.jpg' alt='' />
+						<img src='./src/assets/images/stones.jpg' alt='' />
 					</figure>
 					<p className='about-me'>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
