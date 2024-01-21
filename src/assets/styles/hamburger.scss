@@ -1,0 +1,50 @@
+@use './variables.scss' as *;
+
+.burger-nav {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  background-color: rgba(7, 73, 140, 0.2);
+}
+
+.burger-nav-list {
+  height: 100%;
+  list-style-type: none;
+  @include flex(column, 50px);
+  align-items: center;
+  padding: 60px 10px;
+}
+
+
+.burger-nav-item-link {
+  padding: 10px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  svg {
+    width: 1.12em;
+    height: 1.12em;
+    fill: #ddeafb;
+  }
+}
+
+// ANIMATION CLASSES
+.animate-in {
+  animation: nav-animation 300ms ease-in  forwards ;
+}
+
+@keyframes nav-animation {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

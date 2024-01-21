@@ -1,11 +1,17 @@
 import { FormEventHandler, useState, useEffect } from 'react';
 
 import Nav from './Nav';
+import HamburgerMenu from './HamburgerMenu';
+
+/// <reference types="vite-plugin-svgr/client" />
+import MenuIcon from '../assets/icons/menu.svg?react';
+import CloseMenuIcon from '../assets/icons/close.svg?react';
 
 const Header = () => {
-	const [text, setText] = useState('');
-
-	const [isScrolled, setIsScrolled] = useState(false);
+	// useState
+	const [text, setText] = useState<string>('');
+	const [isScrolled, setIsScrolled] = useState<boolean>(false);
+	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
 	const handleScroll = () => {
 		const scrollY = window.scrollY || document.documentElement.scrollTop;
@@ -30,26 +36,36 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className='header'>
-			<div
-				className={`header-container ${isScrolled ? 'scroll-animation' : ''}`}
-			>
-				<Nav />
-				{/* Mobile Hamburger Menu */}
-
-				<form action='#' className='search-bar' onSubmit={handleSubmit}>
-					<input
-						type='text'
-						value={text}
-						onChange={(e) => setText(e.target.value)}
-						placeholder='find in page...'
-					/>
-					<button type='submit' aria-label='find In Page'>
-						Go
+		<>
+			<header className='header'>
+				<div
+					className={`header-container ${isScrolled ? 'scroll-animation' : ''}`}
+				>
+					<Nav />
+					{isMenuOpen && <HamburgerMenu isMenuOpen={isMenuOpen} />}
+					{/* Mobile Hamburger Menu */}
+					<button
+						className={`hamburger-btn ${isScrolled ? 'black' : 'white'}`}
+						onClick={() => setIsMenuOpen((prevState) => !prevState)}
+					>
+						{isMenuOpen ? <CloseMenuIcon /> : <MenuIcon />}
 					</button>
-				</form>
-			</div>
-		</header>
+
+					{/* Search form */}
+					<form action='#' className='search-bar' onSubmit={handleSubmit}>
+						<input
+							type='text'
+							value={text}
+							onChange={(e) => setText(e.target.value)}
+							placeholder='find in page...'
+						/>
+						<button type='submit' aria-label='find In Page'>
+							Go
+						</button>
+					</form>
+				</div>
+			</header>
+		</>
 	);
 };
 
