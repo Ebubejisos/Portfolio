@@ -1,4 +1,4 @@
-import './assets/styles/main.scss';
+import 'public/assets/styles/main.scss';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
