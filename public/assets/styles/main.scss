@@ -7,7 +7,7 @@
 }
 
 :root {
-  --font-size: 18px;
+  --font-size: 20px;
 }
 
 html {
@@ -226,11 +226,14 @@ div.progress-bar {
 
 
 @media screen and (max-width: 780px) {
+  :root {
+    --font-size: 18px;
+  }  
 }
 
 @media screen and (max-width: 500px) {
   :root {
-    --font-size: 12px;
+    --font-size: 14px;
   }
 
   .header-container {

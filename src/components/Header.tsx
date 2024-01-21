@@ -16,7 +16,7 @@ const Header = () => {
 	const handleScroll = () => {
 		const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-		if (scrollY > 50) {
+		if (scrollY > 300) {
 			setIsScrolled(true);
 		} else {
 			setIsScrolled(false);
