@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 /// <reference types="vite-plugin-svgr/client" />
-import GithubIcon from '../../public/assets/icons/github.svg?react';
+import GithubIcon from '../../assets/icons/github.svg?react';
 
-import '../../public/assets/styles/footer.scss';
+import '../../assets/styles/footer.scss';
 import { openLinksInNewTab } from '../utils/functions';
 
 const Footer = () => {

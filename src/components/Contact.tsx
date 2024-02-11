@@ -1,8 +1,8 @@
 import { FormEventHandler, useState } from 'react';
-import '../../public/assets/styles/contact.scss';
+import '../../assets/styles/contact.scss';
 
 /// <reference types="vite-plugin-svgr/client" />
-import SendIcon from '../../public/assets/icons/send.svg?react';
+import SendIcon from '../../assets/icons/send.svg?react';
 
 const Contact = () => {
 	const [name, setName] = useState<string>('');

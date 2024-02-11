@@ -4,8 +4,8 @@ import Nav from './Nav';
 import HamburgerMenu from './HamburgerMenu';
 
 /// <reference types="vite-plugin-svgr/client" />
-import MenuIcon from '../../public/assets/icons/menu.svg?react';
-import CloseMenuIcon from '../../public/assets/icons/close.svg?react';
+import MenuIcon from '../../assets/icons/menu.svg?react';
+import CloseMenuIcon from '../../assets/icons/close.svg?react';
 
 const Header = () => {
 	// useState
