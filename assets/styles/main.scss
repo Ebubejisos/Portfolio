@@ -77,7 +77,7 @@ body {
 
   svg {    
     width: 1.12em;
-    height: calc(var(--font-size) * 1.12);//same with above method
+    height: calc(var(--font-size) * 1.12);//same with writing 1.12em as in width
     transition: fill 400ms ease-in-out;
   }
 
@@ -154,7 +154,7 @@ body {
     gap: 15px;
     justify-content: center;
     align-items: center;
-    img {
+    svg {
       width: 1.15em;
       height: 1.15em;
     }
