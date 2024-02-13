@@ -1,4 +1,6 @@
 import { codingSkills } from '../utils/skills';
+/// <reference types="vite-plugin-svgr/client" />
+import AccountIcon from '../../assets/icons/account-25.svg?react';
 
 const About = () => {
 	return (
@@ -9,12 +11,12 @@ const About = () => {
 					<figure>
 						<figcaption className='figcaption'>
 							<div className='fig-name'>
-								<img src='/assets/icons/account-25.svg' alt='' />
+								<AccountIcon />
 								<h3>Gideon Anosike</h3>
 							</div>
 							<p>Web Developer and Affliate Pharmacist</p>
 						</figcaption>
-						<img src='assets/images/stones.jpg' alt='profile picture' />
+						<img src='../../assets/images/stones.jpg' alt='profile picture' />
 					</figure>
 					<p className='about-me'>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
