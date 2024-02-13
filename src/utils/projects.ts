@@ -13,7 +13,7 @@ export const projects: Project[] = [
     description: 'A next app with typescript, mongodb, with nextauth google login and credetials log in and more :)',
     repoLink: 'https://github.com/Ebubejisos/Promptopia',
     liveLink: 'https://next-js-promptopia-two.vercel.app/',
-    imgSrc: 'assets/images/stones.jpg',
+    imgSrc: './assets/images/stones.jpg',
     id: 1,
   },
   {

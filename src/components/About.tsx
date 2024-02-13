@@ -14,7 +14,7 @@ const About = () => {
 							</div>
 							<p>Web Developer and Affliate Pharmacist</p>
 						</figcaption>
-						<img src='assets/images/stones.jpg' alt='' />
+						<img src='assets/images/stones.jpg' alt='profile picture' />
 					</figure>
 					<p className='about-me'>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt

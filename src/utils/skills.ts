@@ -9,7 +9,7 @@ export const codingSkills: Skill[] = [
   {
     name: 'Javascript',
     level: '90%',
-    logoSrc: 'assets/icons/icons8-javascript.svg',
+    logoSrc: './assets/icons/icons8-javascript.svg',
     id: 1,
   },
   {
