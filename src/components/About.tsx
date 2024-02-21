@@ -1,5 +1,6 @@
 import { codingSkills } from '../utils/skills';
 /// <reference types="vite-plugin-svgr/client" />
+import profileImage from '../../assets/images/stones.jpg';
 import AccountIcon from '../../assets/icons/account-25.svg?react';
 
 const About = () => {
@@ -16,7 +17,7 @@ const About = () => {
 							</div>
 							<p>Web Developer and Affliate Pharmacist</p>
 						</figcaption>
-						<img src='../../assets/images/stones.jpg' alt='profile picture' />
+						<img src={profileImage} alt='profile picture' />
 					</figure>
 					<p className='about-me'>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
