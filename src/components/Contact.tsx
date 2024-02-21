@@ -1,6 +1,11 @@
 import { FormEventHandler, useState } from 'react';
 import '../../assets/styles/contact.scss';
 
+import locationImg from '../../assets/images/stones.jpg';
+import mapMarker from '../../assets/icons/map-marker.svg';
+import phone from '../../assets/icons/phone.svg';
+import mail from '../../assets/icons/email.svg';
+
 /// <reference types="vite-plugin-svgr/client" />
 import SendIcon from '../../assets/icons/send.svg?react';
 
@@ -25,7 +30,7 @@ const Contact = () => {
 			<div className='contact-detail-container'>
 				<div className='left-content'>
 					<img
-						src='assets/images/stones.jpg'
+						src={locationImg}
 						alt='my location image'
 						className='residence-img'
 					/>
@@ -33,15 +38,15 @@ const Contact = () => {
 				<div className='right-content'>
 					<ul className='contact-info-list'>
 						<li className='contact'>
-							<img src='assets/icons/map-marker.svg' alt='' />
+							<img src={mapMarker} alt='' />
 							<span>Anambra, Nigeria</span>
 						</li>
 						<li className='contact'>
-							<img src='assets/icons/phone.svg' alt='' />
+							<img src={phone} alt='' />
 							<span>Phone: +234 90 6615 0628</span>
 						</li>
 						<li className='contact'>
-							<img src='assets/icons/email.svg' alt='' />
+							<img src={mail} alt='' />
 							<span>Email: anosykegideon@gmail.com</span>
 						</li>
 					</ul>
