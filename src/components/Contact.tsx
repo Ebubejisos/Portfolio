@@ -82,10 +82,8 @@ const Contact = () => {
 								onChange={(e) => setMessage(e.target.value)}
 							></textarea>
 							<button type='submit' aria-label='Send message'>
-								<div>
-									<SendIcon />
-									<span>Send Message</span>
-								</div>
+								<SendIcon />
+								<span>Send Message</span>
 							</button>
 						</form>
 					</div>

@@ -18,12 +18,12 @@ const Portfolio = () => {
 							<h3>{project.name}</h3>
 							<p>{project.description}</p>
 							<div className='link-btn-container'>
-								<button className='repo-link'>
-									<a href={project.repoLink}>github-repo</a>
-								</button>
-								<button className='live-link'>
-									<a href={project.liveLink}>live app</a>
-								</button>
+								<a href={project.repoLink} className='repo-link'>
+									github-repo
+								</a>
+								<a href={project.liveLink} className='live-link'>
+									live app
+								</a>
 							</div>
 						</div>
 						<div className='img-container'>

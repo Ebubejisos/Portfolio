@@ -14,9 +14,9 @@ const Footer = () => {
 	return (
 		<footer className='footer'>
 			<div>
-				<button className='top-btn'>
-					<a href='#'>To the top</a>
-				</button>
+				<a href='#' className='top-btn'>
+					To the top
+				</a>
 				<ul className='social-media-links'>
 					<li>
 						<a href=''>

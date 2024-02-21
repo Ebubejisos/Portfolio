@@ -68,15 +68,13 @@
   p {
     padding: 0px 10px;
   }
-  button {
+  a.repo-link, a.live-link {
     width: fit-content;
     padding: 0.58em;
     border-radius: 5px;
     background-color: $black;
-    a {
-      text-decoration: none;
-      color: $white;
-    }
+    text-decoration: none;
+    color: $white;
   }
 }
 

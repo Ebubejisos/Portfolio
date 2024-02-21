@@ -102,7 +102,7 @@ li.contact img{
     height: fit-content;
     &:focus {
       border: none;
-      border-bottom: 2px solid $secondary;
+      border-bottom: 2px solid #c2c1c1;
     }
   }
   textarea {
@@ -112,28 +112,31 @@ li.contact img{
 }
 
 .message-form button {
-  padding: 15px;
-  height: fit-content;
+  padding: .5em;
   background-color: #090909;
-  cursor: pointer;
-  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   transition: all 0.2s ease-in-out;
-  &:hover {
-    font-size: .95em;
-  }
-  div {
-    display: flex;
-    gap: 5px;
-    svg {
-      width: 1.1em;
-      height: 1.1em;
-    }
-    span {
-      text-transform: uppercase;
-      color: $white;
-    }
-  }
   
+  cursor: pointer;
+  svg {
+    width: 1.1em;
+    height: 1.1em;
+    transition: all 0.5s ease-in-out;
+  }
+  span {
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &:hover {
+    border-radius: 5px;
+    font-size: .9em;
+    svg {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @media screen and (max-width: 720px) {
