@@ -1,3 +1,10 @@
+import javascript from '../../assets/icons/icons8-javascript.svg';
+import css from '../../assets/icons/icons8-css3.svg';
+import react from '../../assets/icons/icons8-react-native.svg';
+import typescript from '../../assets/icons/icons8-typescript.svg';
+import nextjs from '../../assets/icons/icons8-next.js.svg';
+import mongo from '../../assets/icons/mongodb.svg';
+
 interface Skill {
   name?: string;
   level?: string | number;
@@ -9,37 +16,37 @@ export const codingSkills: Skill[] = [
   {
     name: 'Javascript',
     level: '90%',
-    logoSrc: '../../assets/icons/icons8-javascript.svg',
+    logoSrc: javascript,
     id: 1,
   },
   {
     name: 'Cascading Style Sheets, CSS',
     level: '93%',
-    logoSrc: 'assets/icons/icons8-css3.svg',
+    logoSrc: css,
     id: 2,
   },
   {
     name: 'React',
     level: '89%',
-    logoSrc: 'assets/icons/icons8-react-native.svg',
+    logoSrc: react,
     id: 3,
   },
   {
     name: 'Typescript',
     level: '84%',
-    logoSrc: 'assets/icons/icons8-typescript.svg',
+    logoSrc: typescript,
     id: 4,
   },
   {
     name: 'NextJs',
     level: '76%',
-    logoSrc: 'assets/icons/icons8-next.js.svg',
+    logoSrc: nextjs,
     id: 5,
   },
   {
     name: 'MongoDB',
     level: '72%',
-    logoSrc: 'assets/icons/mongodb.svg',
+    logoSrc: mongo,
     id: 6,
   },
 ];
