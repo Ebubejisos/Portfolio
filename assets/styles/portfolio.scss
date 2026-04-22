@@ -3,6 +3,9 @@
 .portfolio-section {
   padding: 40px 0px;
   h1{
+    // space out letters and make uppercase
+    letter-spacing: 3px;
+    text-transform: uppercase;
     margin: 20px 0px;
   }
 }
