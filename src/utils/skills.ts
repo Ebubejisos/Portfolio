@@ -39,13 +39,13 @@ export const codingSkills: Skill[] = [
   },
   {
     name: 'NextJs',
-    level: '76%',
+    level: '90%',
     logoSrc: nextjs,
     id: 5,
   },
   {
-    name: 'MongoDB',
-    level: '72%',
+    name: 'ExpressJs and databases',
+    level: '75%',
     logoSrc: mongo,
     id: 6,
   },

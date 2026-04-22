@@ -11,6 +11,14 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    name: 'Inventory Tracker',
+    description: 'Manage your inventory with ease, add items, update stock levels, and track your inventory in real-time. Built with nextjs, typescript, postgres and express',
+    repoLink: 'https://github.com/Ebubejisos/Inventory-Tracker',
+    liveLink: 'https://inventory-tracker-gold-two.vercel.app/',
+    imgSrc: image,
+    id: 0,
+  },
+  {
     name: 'Promptopia',
     description: 'A next app with typescript, mongodb, with nextauth google login and credetials log in and more :)',
     repoLink: 'https://github.com/Ebubejisos/Promptopia',
