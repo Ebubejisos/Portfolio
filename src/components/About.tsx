@@ -1,6 +1,6 @@
 import { codingSkills } from '../utils/skills';
 /// <reference types="vite-plugin-svgr/client" />
-import profileImage from '../../assets/images/stones.jpg';
+import profileImage from '../../assets//images/IMG-20220829-WA0059.jpg';
 import AccountIcon from '../../assets/icons/account-25.svg?react';
 
 const About = () => {
@@ -15,14 +15,23 @@ const About = () => {
 								<AccountIcon />
 								<h3>Gideon Anosike</h3>
 							</div>
-							<p>Web Developer and Affliate Pharmacist</p>
+							<p>Web Developer | Building Modern Web Applications</p>
 						</figcaption>
 						<img src={profileImage} alt='profile picture' />
 					</figure>
 					<p className='about-me'>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
-						cumque quos, voluptatibus nobis magnam at tempore, placeat
-						reiciendis veniam ad, non atque eos aliquam accusamus?
+						I’m a web developer who helps businesses build fast, modern, and
+						user-friendly web applications. My focus is on creating solutions
+						that are not just visually clean, but also practical and efficient
+						to use. With a background in pharmacy, I naturally approach
+						development with attention to detail and structure—building systems
+						that handle data clearly and reliably. I’ve worked on projects
+						including an inventory management system and interactive web
+						applications, and I’m currently deepening my full-stack skills to
+						build more scalable solutions. If you’re looking to build a website,
+						improve an existing product, or add new features, I’m available for
+						freelance work and open to collaborating on impactful projects.
+						<p className='cta'>Let’s build something impactful.</p>
 					</p>
 				</div>
 				<div className='core-skills'>
