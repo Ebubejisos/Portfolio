@@ -1,7 +1,6 @@
 import { FormEventHandler, useState } from 'react';
 import '../../assets/styles/contact.scss';
 
-import locationImg from '../../assets/images/stones.jpg';
 import mapMarker from '../../assets/icons/map-marker.svg';
 import phone from '../../assets/icons/phone.svg';
 import mail from '../../assets/icons/email.svg';
@@ -30,23 +29,24 @@ const Contact = () => {
 			<div className='contact-detail-container'>
 				<div className='left-content'>
 					<img
-						src={locationImg}
+						src='../../assets/images/IMG_1402.JPG'
 						alt='my location image'
+						loading='lazy'
 						className='residence-img'
 					/>
 				</div>
 				<div className='right-content'>
 					<ul className='contact-info-list'>
 						<li className='contact'>
-							<img src={mapMarker} alt='' />
-							<span>Anambra, Nigeria</span>
+							<img src={mapMarker} alt='map marker' />
+							<span>Lagos, Nigeria</span>
 						</li>
 						<li className='contact'>
-							<img src={phone} alt='' />
+							<img src={phone} alt='phone icon' />
 							<span>Phone: +234 90 6615 0628</span>
 						</li>
 						<li className='contact'>
-							<img src={mail} alt='' />
+							<img src={mail} alt='email icon' />
 							<span>Email: anosykegideon@gmail.com</span>
 						</li>
 					</ul>

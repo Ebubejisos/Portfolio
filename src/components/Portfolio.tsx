@@ -28,7 +28,7 @@ const Portfolio = () => {
 						</div>
 						<div className='img-container'>
 							<div className='img-frame'>
-								<img src={project.imgSrc} alt={project.name} />
+								<img src={project.imgSrc} alt={project.name} loading='lazy' />
 							</div>
 						</div>
 					</div>
