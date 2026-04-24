@@ -10,7 +10,7 @@ const Portfolio = () => {
 	}, []);
 	return (
 		<section id='portfolio' className='portfolio-section'>
-			<h1>Portfolio</h1>
+			<h1>My Projects</h1>
 			<div className='projects-container'>
 				{projects.map((project) => (
 					<div className='project' key={project.id}>

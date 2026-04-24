@@ -45,7 +45,7 @@ const Header = () => {
 					{isMenuOpen && <HamburgerMenu isMenuOpen={isMenuOpen} />}
 					{/* Mobile Hamburger Menu */}
 					<button
-						className={`hamburger-btn ${isScrolled ? 'black' : 'white'}`}
+						className={`hamburger-btn ${isScrolled ? 'white' : 'white'}`}
 						onClick={() => setIsMenuOpen((prevState) => !prevState)}
 					>
 						{isMenuOpen ? <CloseMenuIcon /> : <MenuIcon />}
@@ -64,29 +64,27 @@ const Header = () => {
 						</button>
 					</form>
 				</div>
+				{/* HERO-SECTION */}
+				<section className='hero'>
+					<h1>I help businesses build fast, modern web applications</h1>
+
+					<p>
+						I design and develop responsive websites and web apps that are
+						clean, efficient, and built to solve real problems.
+					</p>
+
+					<p>
+						Whether you need a new website, a feature upgrade, or a custom tool,
+						I can help bring your idea to life.
+					</p>
+
+					<div className='hero-cta'>
+						<a href='#contact' className='btn-secondary'>
+							Get In Touch
+						</a>
+					</div>
+				</section>
 			</header>
-			<section className='hero'>
-				<h1>I help businesses build fast, modern web applications</h1>
-
-				<p>
-					I design and develop responsive websites and web apps that are clean,
-					efficient, and built to solve real problems.
-				</p>
-
-				<p>
-					Whether you need a new website, a feature upgrade, or a custom tool, I
-					can help bring your idea to life.
-				</p>
-
-				<div className='hero-cta'>
-					<a href='#portfolio' className='btn-primary'>
-						See My Projects
-					</a>
-					<a href='#contact' className='btn-secondary'>
-						Get In Touch
-					</a>
-				</div>
-			</section>
 		</>
 	);
 };
