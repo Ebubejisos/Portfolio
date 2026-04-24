@@ -31,7 +31,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 40%;
-  min-height: 500px;
+  min-height: 700px;
   position: relative;
   @media screen and (max-width: 500px) {
     min-height: 300px;
@@ -129,7 +129,7 @@ body {
 // HERO SECTION STYLES
 .hero {
   max-width: 1100px;
-  min-height: 500px;// same as header min-height
+  min-height: 700px;// same as header min-height
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
