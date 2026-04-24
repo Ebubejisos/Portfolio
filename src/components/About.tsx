@@ -2,6 +2,7 @@ import { codingSkills } from '../utils/skills';
 /// <reference types="vite-plugin-svgr/client" />
 import profileImage from '../../assets//images/IMG-20220829-WA0059.jpg';
 import AccountIcon from '../../assets/icons/account-25.svg?react';
+import '../../assets/styles/about.scss';
 
 const About = () => {
 	return (
