@@ -2,7 +2,7 @@
 
 
 .footer {
-  margin-top: 40px;
+  margin: 0 auto;
   padding: 20px;
   color: $white;
   min-height: 150px;
@@ -10,10 +10,10 @@
 }
 
 .top-btn {
-  padding: 8px 5px;
-  background-color: $white;
+  padding: 0.7rem 1.2rem;
+  background-color: $indigo;
   border-radius: 5px;
-  color: $black;
+  color: $white;
   text-decoration: none;
   transition: opacity 0.3s ease-in;
   &:hover {

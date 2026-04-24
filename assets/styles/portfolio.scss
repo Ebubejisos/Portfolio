@@ -2,6 +2,9 @@
 
 .portfolio-section {
   padding: 40px 0px;
+  background-color: $white;
+  max-width: 1400px;
+  margin: 0 auto;
   h1{
     // space out letters and make uppercase
     letter-spacing: 3px;
@@ -10,7 +13,6 @@
   }
 }
 .projects-container {
-  background-color: $secondary;
   max-width: 1100px;
   margin: 0px auto;
   padding: 30px 0px;
@@ -75,7 +77,7 @@
     width: fit-content;
     padding: 0.58em;
     border-radius: 5px;
-    background-color: $black;
+    background-color: $indigo;
     text-decoration: none;
     color: $white;
   }

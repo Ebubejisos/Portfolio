@@ -1,7 +1,10 @@
 @use './variables.scss' as *;
 
 .contact-section{
-  padding-top: 40px;
+  padding: 40px 0;
+  background-color: $white;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .contact-bg-img {
   position: relative;
@@ -60,6 +63,17 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 760px) {
+  .contact-detail-container .left-content {
+    margin: 0 auto;
+
+  }
+  .contact-detail-container .residence-img{
+    height: 250px;
+    flex-grow: 1;
+  }
+}
+
 ul.contact-info-list{
   list-style-type: none;
   margin: 15px 0;
@@ -113,7 +127,8 @@ li.contact img{
 
 .message-form button {
   padding: .5em;
-  background-color: #090909;
+  background-color: $indigo;
+  border: none;
   display: flex;
   align-items: center;
   gap: 5px;

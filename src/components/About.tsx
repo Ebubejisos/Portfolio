@@ -18,7 +18,12 @@ const About = () => {
 								</div>
 								<p>Web Developer | Building Modern Web Applications</p>
 							</figcaption>
-							<img src={profileImage} alt='profile picture' loading='lazy' />
+							<img
+								className='about-img'
+								src={profileImage}
+								alt='profile picture'
+								loading='lazy'
+							/>
 						</figure>
 						<p className='about-me'>
 							I’m a web developer who helps businesses build fast, modern, and
