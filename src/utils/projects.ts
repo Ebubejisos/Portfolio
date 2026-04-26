@@ -15,7 +15,7 @@ type Project = {
 export const projects: Project[] = [
   {
     name: 'Inventory Tracker',
-    description: 'Manage your inventory with ease, add items, update stock levels, and track your inventory in real-time. Built with nextjs, typescript, postgres and express',
+    description: 'A full-stack inventory management system designed to help pharmacies efficiently track and manage products. The application reduces reliance on manual processes by providing a structured and user-friendly interface for handling inventory data in real time.',
     repoLink: 'https://github.com/Ebubejisos/Inventory-Tracker',
     liveLink: 'https://inventory-tracker-gold-two.vercel.app/',
     imgSrc: inventory,
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Promptopia',
-    description: 'A next app with typescript, mongodb, with nextauth google login and credetials log in and more :)',
+    description: 'A full-stack web platform that allows users to create accounts and share useful AI prompts with a wider community. The application focuses on discoverability and collaboration through structured content and hashtag-based search.',
     repoLink: 'https://github.com/Ebubejisos/Promptopia',
     liveLink: 'https://next-js-promptopia-two.vercel.app/',
     imgSrc: promptopia,
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     name: 'CV-Builder',
-    description: 'CV-Builder helps you create your cv after filling in your necessary information and can be downloaded as a pdf. Built with react and inspired by https://www.theodinproject.com/',
+    description: 'A web-based application that simplifies the process of creating professional CVs. It provides a structured interface for users to input their details and instantly generate a clean, well-formatted resume.',
     repoLink: 'https://github.com/Ebubejisos/CV-React-app',
     liveLink: 'https://ebubejisos.github.io/CV-React-app/',
     imgSrc: cvBuilder,
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Krypt',
-    description: ' Krypt is my first web3.0 app which allows transfer of sepolia test ETH between users, login with metamask and start transferring test ETH',
+    description: ' Krypt is a decentralized web application that enables users to connect their wallet and transfer Sepolia testnet ETH securely. The project demonstrates integration with blockchain networks and real-time transaction handling using modern Web3 tools.',
     repoLink: 'https://github.com/Ebubejisos/Krypt',
     liveLink: 'https://web3-0-krypt.vercel.app/',
     imgSrc: krypt,

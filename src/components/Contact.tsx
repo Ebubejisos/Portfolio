@@ -4,6 +4,7 @@ import '../../assets/styles/contact.scss';
 import mapMarker from '../../assets/icons/map-marker.svg';
 import phone from '../../assets/icons/phone.svg';
 import mail from '../../assets/icons/email.svg';
+import contactImg from '../../assets/images/location.png';
 
 /// <reference types="vite-plugin-svgr/client" />
 import SendIcon from '../../assets/icons/send.svg?react';
@@ -29,7 +30,7 @@ const Contact = () => {
 			<div className='contact-detail-container'>
 				<div className='left-content'>
 					<img
-						src='../../assets/images/IMG_1402.JPG'
+						src={contactImg}
 						alt='my location image'
 						loading='lazy'
 						className='residence-img'

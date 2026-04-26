@@ -19,10 +19,10 @@ const Portfolio = () => {
 							<p>{project.description}</p>
 							<div className='link-btn-container'>
 								<a href={project.repoLink} className='repo-link'>
-									github-repo
+									View Code
 								</a>
 								<a href={project.liveLink} className='live-link'>
-									live app
+									live Demo
 								</a>
 							</div>
 						</div>
