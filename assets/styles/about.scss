@@ -106,10 +106,18 @@
     height: 1.15em;
   }
 }
+.skill-name h4{
+  color: $indigo;
+}
 
 div.progress-bar {
   background-color: $black;
   border-radius: inherit;
+  animation: fillProgressBar linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 200px;
+  
   p {
     opacity: 0;
     color: $white;
@@ -123,6 +131,18 @@ div.progress-bar {
   padding: 5px 0px;
 }
 
+// animation to fill the progress bar from left to right
+@keyframes fillProgressBar {
+// scale the width of the progress bar from 50% to 100%
+  from {
+    transform: scaleX(0.5);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  } 
+}
 
 @media screen and (max-width: 780px) {
   :root {

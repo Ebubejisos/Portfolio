@@ -16,6 +16,7 @@ const Portfolio = () => {
 					<div className='project' key={project.id}>
 						<div className='project-details'>
 							<h3>{project.name}</h3>
+
 							<p>{project.description}</p>
 							<div className='link-btn-container'>
 								<a href={project.repoLink} className='repo-link'>
