@@ -3,6 +3,10 @@ import promptopia from '../../assets/images/Promptopia.png';
 import cvBuilder from '../../assets/images/CV-creator.png';
 import krypt from '../../assets/images/Krypt.png';
 
+import inventoryDemo from '../../assets/videos/inventory-demo.webm';
+import cvBuilderDemo from '../../assets/videos/cvCreator-demo.webm';
+
+
 type Project = {
   name?: string;
   description?: string;
@@ -12,6 +16,7 @@ type Project = {
   repoLink?: string;
   liveLink?: string;
   imgSrc?: string;
+  videoSrc?: string;
   id: number;
 }
 
@@ -33,6 +38,7 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/Ebubejisos/Inventory-Tracker',
     liveLink: 'https://inventory-tracker-gold-two.vercel.app/',
     imgSrc: inventory,
+    videoSrc: inventoryDemo,
     id: 0,
   },
   {
@@ -52,6 +58,7 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/Ebubejisos/Promptopia',
     liveLink: 'https://next-js-promptopia-two.vercel.app/',
     imgSrc: promptopia,
+    videoSrc: '',
     id: 1,
   },
   {
@@ -67,6 +74,7 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/Ebubejisos/CV-React-app',
     liveLink: 'https://ebubejisos.github.io/CV-React-app/',
     imgSrc: cvBuilder,
+    videoSrc: cvBuilderDemo,
     id: 2,
   },
   {
@@ -84,6 +92,7 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/Ebubejisos/Krypt',
     liveLink: 'https://web3-0-krypt.vercel.app/',
     imgSrc: krypt,
+    videoSrc: '',
     id: 3,
   }
 ]
