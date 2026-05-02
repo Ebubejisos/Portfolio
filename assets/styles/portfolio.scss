@@ -26,6 +26,7 @@
   flex-grow: 1;
   display: flex;
   justify-content: flex-start;
+  cursor: pointer;
   .img-frame{
     max-width: 600px;
     height: 350px;
@@ -82,12 +83,68 @@
     color: $white;
   }
 }
+.project-details header {
+  display: flex;
+  gap: 10px;
+  .open-modal {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: $indigo;
+    color: $white;
+    border: none;
+    cursor: pointer;
+  }
+}
 
 .link-btn-container {
   @include flex(column, 10px);
   align-items: center;
 }
 
+// MODAL
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  // place in center of screen
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+  overflow: auto;
+}
+.modal h4 {
+  margin-bottom: 10px;
+}
+.modal ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  li {
+    margin-bottom: 5px;
+  }      
+}
+.modal .close-modal {
+  background-color: $indigo;
+  color: $white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal .project-video {
+  // fit video element to smaller screen
+  width: 100%;
+  height: auto;
+}
+
+
+// MEDIA QUERIES
 @media screen and (max-width: 780px){
   .project {
     @include flex(column, 10px);
@@ -122,6 +179,7 @@
     width: 100%;
     height: 100%;
   }
+
 }
 
 @media screen and (max-width: 500px) {
