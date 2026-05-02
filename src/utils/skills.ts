@@ -15,7 +15,7 @@ interface Skill {
 export const codingSkills: Skill[] = [
   {
     name: 'Javascript',
-    level: '90%',
+    level: '98%',
     logoSrc: javascript,
     id: 1,
   },
@@ -27,25 +27,25 @@ export const codingSkills: Skill[] = [
   },
   {
     name: 'React',
-    level: '89%',
+    level: '94%',
     logoSrc: react,
     id: 3,
   },
   {
     name: 'Typescript',
-    level: '84%',
+    level: '88%',
     logoSrc: typescript,
     id: 4,
   },
   {
     name: 'NextJs',
-    level: '90%',
+    level: '92%',
     logoSrc: nextjs,
     id: 5,
   },
   {
     name: 'ExpressJs and databases',
-    level: '75%',
+    level: '85%',
     logoSrc: mongo,
     id: 6,
   },
