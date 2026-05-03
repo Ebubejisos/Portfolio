@@ -32,8 +32,11 @@
     height: 350px;
     background-color: $whiteTile;
     opacity: .7;
+    transition: opacity 0.3s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
     &:hover {
       opacity: 1;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.537);
     }
   }
   img {
@@ -79,8 +82,14 @@
     padding: 0.58em;
     border-radius: 5px;
     background-color: $indigo;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     color: $white;
+    transition: background-color,transform 0.3s ease-in-out;
+    &:hover {
+      background-color: darken($indigo, 10%);
+      transform: scale(1.1);
+    }
   }
 }
 .project-details header {
@@ -94,11 +103,26 @@
     color: $white;
     border: none;
     cursor: pointer;
-  }
+    animation: pulse 2s infinite;
+  } 
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} 
 
 .link-btn-container {
-  @include flex(column, 10px);
+  @include flex(row, 10px);
   align-items: center;
 }
 
@@ -107,6 +131,7 @@
   background: rgba(0, 0, 0, 0.6);
 }
 .modal {
+  position: relative;
   border: none;
   border-radius: 12px;
   padding: 20px;
@@ -137,8 +162,31 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.modal .close-modal-times {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: $indigo;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  // make it spin on hover and scale up a bit
+  &:hover {
+    animation: spin 0.25s linear;
+    transform: scale(1.2);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
 .modal .project-video {
-  // fit video element to smaller screen
   width: 100%;
   height: auto;
 }
@@ -159,10 +207,6 @@
         height: 100%;
       }      
     }
-  }
-
-  .link-btn-container {
-    flex-direction: row;
   }
 
   .project-details {

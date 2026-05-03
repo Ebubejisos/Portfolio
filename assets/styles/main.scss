@@ -48,7 +48,7 @@ body {
   color: #ffffff;
 }
 .scroll-animation {
-  background-color: $indigo;
+  background-color: $black;
   color: $white;
   animation: scrollAnimate 0.6s ease-out 1 forwards;
 }
@@ -76,6 +76,7 @@ body {
   display: flex;
   align-items: center;
   padding: 14px 10px;
+  gap: 5px;
   text-decoration: none;
   
   color: inherit;
@@ -84,14 +85,16 @@ body {
   svg {    
     width: 1.12em;
     height: calc(var(--font-size) * 1.12);//same with writing 1.12em as in width
-    transition: fill 400ms ease-in-out;
+    fill: $white;
+    transition: fill,transform 400ms ease-in-out;
   }
-
+  
   &:hover{
     background-color: $white;
     color: $black;
   }
   &:hover svg {
+    transform: scale(1.25);
     fill: $indigo;
   }
 }

@@ -26,13 +26,15 @@ export const projects: Project[] = [
     description: 'A full-stack inventory management system designed to help pharmacies efficiently track and manage products. The application reduces reliance on manual processes by providing a structured and user-friendly interface for handling inventory data in real time.',
     features: [
       'Real-time inventory tracking',
+      'Responsive design',
       'User-friendly interface',
-      'Efficient product management'
+      'Efficient product management',
+      'Search and filter functionality',
     ],
     techStack: [
       'PostgreSQL',
       'Express.js',
-      'NextJs',
+      'Next.js',
       'Node.js',
     ],
     repoLink: 'https://github.com/Ebubejisos/Inventory-Tracker',
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     description: 'A full-stack web platform that allows users to create accounts and share useful AI prompts with a wider community. The application focuses on discoverability and collaboration through structured content and hashtag-based search.',
     features: [
       'User account creation',
+      'Dynamic user profiles',
       'AI prompt sharing',
       'Hashtag-based search'
     ],
@@ -53,7 +56,7 @@ export const projects: Project[] = [
       'Next.js',
       'Typescript',
       'MongoDB',
-      'Next Auth',
+      'API Routes',
     ],
     repoLink: 'https://github.com/Ebubejisos/Promptopia',
     liveLink: 'https://next-js-promptopia-two.vercel.app/',
@@ -66,10 +69,12 @@ export const projects: Project[] = [
     description: 'A web-based application that simplifies the process of creating professional CVs. It provides a structured interface for users to input their details and instantly generate a clean, well-formatted resume.',
     features: [
       'User-friendly interface',
+      'Preview of generated CV',
       'Instant CV generation'
     ],
     techStack: [
       'React',
+      'APIs'
     ],
     repoLink: 'https://github.com/Ebubejisos/CV-React-app',
     liveLink: 'https://ebubejisos.github.io/CV-React-app/',
@@ -87,7 +92,9 @@ export const projects: Project[] = [
     ],
     techStack: [
       'React',
-      'Web3.js'
+      'Web3.js',
+      'Solidity',
+      'Ethers.js'
     ],
     repoLink: 'https://github.com/Ebubejisos/Krypt',
     liveLink: 'https://web3-0-krypt.vercel.app/',

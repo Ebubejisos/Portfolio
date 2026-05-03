@@ -58,7 +58,9 @@ const Portfolio = () => {
 			</div>
 			{/* MODAL */}
 			<dialog ref={dialogRef} className='modal'>
-				{/* create a list for project features and techstack here */}
+				<button className='close-modal-times' onClick={closeModal}>
+					&times;
+				</button>
 				<h4>Key Features:</h4>
 				<ul>
 					{selectedProject.features?.map((feature, index) => (
@@ -74,6 +76,7 @@ const Portfolio = () => {
 				<video
 					className='project-video'
 					src={selectedProject.videoSrc}
+					loop
 					autoPlay
 					muted
 				></video>
