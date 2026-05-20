@@ -28,6 +28,7 @@
   justify-content: flex-start;
   cursor: pointer;
   .img-frame{
+    border-radius: 30px;
     max-width: 600px;
     height: 350px;
     background-color: $whiteTile;
@@ -41,6 +42,7 @@
   }
   img {
     position: relative;
+    border-radius: inherit;
     top: 50px;
     left: 100px;
     max-width: 600px;
@@ -81,14 +83,24 @@
     width: fit-content;
     padding: 0.58em;
     border-radius: 5px;
-    background-color: $indigo;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     color: $white;
-    transition: background-color,transform 0.3s ease-in-out;
+    transition: background-color,transform 0.2s ease-in-out;
     &:hover {
-      background-color: darken($indigo, 10%);
-      transform: scale(1.1);
+      transform: scale(.95);
+    }
+  }
+  a.repo-link {
+    background-color: $indigo;
+    &:hover {
+    background-color: darken($indigo, 10%);
+    }
+  }
+  a.live-link {
+    background-color: $primary;
+    &:hover {
+      background-color: darken($primary, 10%);
     }
   }
 }
@@ -161,6 +173,11 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color,transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(0.95);
+    background-color: darken($indigo, 10%);
+  }
 }
 .modal .close-modal-times {
   position: absolute;
@@ -187,6 +204,7 @@
   }
 }
 .modal .project-video {
+  border-radius: 10px;
   width: 100%;
   height: auto;
 }
