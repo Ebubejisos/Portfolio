@@ -17,6 +17,7 @@ type Project = {
   liveLink?: string;
   imgSrc?: string;
   videoSrc?: string;
+  videoPoster?: string;
   id: number;
 }
 
@@ -40,6 +41,7 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/Ebubejisos/Inventory-Tracker',
     liveLink: 'https://inventory-tracker-gold-two.vercel.app/',
     imgSrc: inventory,
+    videoPoster: inventory,
     videoSrc: inventoryDemo,
     id: 0,
   },
@@ -62,6 +64,7 @@ export const projects: Project[] = [
     liveLink: 'https://next-js-promptopia-two.vercel.app/',
     imgSrc: promptopia,
     videoSrc: '',
+    videoPoster: promptopia,
     id: 1,
   },
   {
@@ -80,6 +83,7 @@ export const projects: Project[] = [
     liveLink: 'https://ebubejisos.github.io/CV-React-app/',
     imgSrc: cvBuilder,
     videoSrc: cvBuilderDemo,
+    videoPoster: cvBuilder,
     id: 2,
   },
   {
@@ -100,6 +104,7 @@ export const projects: Project[] = [
     liveLink: 'https://web3-0-krypt.vercel.app/',
     imgSrc: krypt,
     videoSrc: '',
+    videoPoster: krypt,
     id: 3,
   }
 ]

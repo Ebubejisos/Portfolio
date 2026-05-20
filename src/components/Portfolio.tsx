@@ -79,6 +79,7 @@ const Portfolio = () => {
 					loop
 					autoPlay
 					muted
+					poster={selectedProject.videoPoster}
 				></video>
 				<button className='close-modal' onClick={closeModal}>
 					Close
