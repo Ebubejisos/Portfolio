@@ -6,21 +6,22 @@
   left: 0;
   width: 100vw;
   height: calc(100vh - 50px);
-  background: rgba(79, 70, 229, 0.08);
+  // make background darker with $primary color and a little transparent to see the content behind it
+  background: transparentize($color: $primary, $amount: 0.6);
+  z-index: 10;
   backdrop-filter: blur(5px);
 }
 
 .burger-nav-list {
+  padding-top: 8em;
   height: 100%;
   list-style-type: none;
-  @include flex(column, 50px);
+  @include flex(column, 4em);
   align-items: center;
-  padding: 60px 10px;
 }
 
 
 .burger-nav-item-link {
-  padding: 10px;
   display: flex;
   gap: 6px;
   justify-content: center;
@@ -29,11 +30,15 @@
   font-weight: 300;
   color: white;
   text-decoration: none;
+  transition: transform 0.6s ease-in-out;
   svg {
     width: 1.12em;
     height: 1.12em;
     fill: #ddeafb;
   }
+  &:hover {
+    transform: scale(.96);  
+}
 }
 
 // ANIMATION CLASSES
