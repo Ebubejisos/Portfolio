@@ -2,9 +2,10 @@ import inventory from '../../assets/images/Drug-inventory.png';
 import promptopia from '../../assets/images/Promptopia.png';
 import cvBuilder from '../../assets/images/CV-creator.png';
 import krypt from '../../assets/images/Krypt.png';
-
+// demo video imports
 import inventoryDemo from '../../assets/videos/inventory-demo.webm';
 import cvBuilderDemo from '../../assets/videos/cvCreator-demo.webm';
+import promptopiaDemo from '../../assets/videos/promptopia-demo.mp4';
 
 
 type Project = {
@@ -63,7 +64,7 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/Ebubejisos/Promptopia',
     liveLink: 'https://next-js-promptopia-two.vercel.app/',
     imgSrc: promptopia,
-    videoSrc: '',
+    videoSrc: promptopiaDemo,
     videoPoster: promptopia,
     id: 1,
   },
