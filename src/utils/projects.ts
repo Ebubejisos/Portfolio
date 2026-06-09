@@ -11,7 +11,6 @@ import promptopiaDemo from '../../assets/videos/promptopia-demo.mp4';
 type Project = {
   name?: string;
   description?: string;
-  // include key features and techstack as other optional properties if needed    
   features?: string[];
   techStack?: string[];
   repoLink?: string;

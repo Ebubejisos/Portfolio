@@ -1,4 +1,3 @@
-
 {
   "name": "portfolio",
   "private": true,
@@ -13,6 +12,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "resend": "^6.12.4",
     "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
