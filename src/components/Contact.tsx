@@ -13,8 +13,25 @@ const Contact = () => {
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
-	const handleSendMessage: FormEventHandler = (e) => {
+	const handleSendMessage: FormEventHandler = async (e) => {
 		e.preventDefault();
+		// use fetch and post request to api/contact
+		const response = await fetch('/api/contact', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ name, email, message }),
+		});
+		const data = await response.json();
+		if (data.success) {
+			alert(`Message sent successfully! ID: ${data.id}`);
+			setName('');
+			setEmail('');
+			setMessage('');
+		} else {
+			alert('Failed to send message. Please try again later.');
+		}
 	};
 
 	return (
