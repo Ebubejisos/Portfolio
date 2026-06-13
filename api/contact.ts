@@ -24,8 +24,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     // 3. Send confirmation email TO the user
     await resend.emails.send({
-      from: 'Your Name <noreply@yourdomain.com>',  // ← must be your verified Resend domain
-      to: email,
+      // from: 'Your Name <noreply@yourdomain.com>',  // ← must be your verified Resend domain
+      from: 'Acme <onboarding@resend.dev>',
+      to: [email],
       subject: 'Thanks for reaching out!',
       html: `
         <p>Hi ${name},</p>
@@ -40,8 +41,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // 4. Forward the submission TO you
     await resend.emails.send({
-      from: 'Portfolio Contact <noreply@yourdomain.com>', // same verified domain
-      to: 'you@yourprofessionalemail.com',               // ← your real email
+      from: 'Acme <onboarding@resend.dev>', // same verified domain
+      to: 'anosykegideon@gmail.com',               // ← your real email
       replyTo: email,                                     // lets you reply directly to the user
       subject: `New message from ${name}`,
       html: `
@@ -53,7 +54,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `,
     });
 
-    return res.status(200).json({ message: 'Emails sent successfully.' });
+    return res.status(200).json({ 
+      success: true,
+      message: 'Emails sent successfully.' });
 
   } catch (error) {
     console.error('Resend error:', error);

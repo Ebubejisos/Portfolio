@@ -22,6 +22,7 @@ const Contact = () => {
 	};
 	const handleSendMessage: FormEventHandler = async (e) => {
 		e.preventDefault();
+		setIsSending(true);
 		// use fetch and post request to api/contact
 		const response = await fetch('/api/contact', {
 			method: 'POST',
