@@ -9,10 +9,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, description } = req.body;
+  const { name, email, message } = req.body;
 
   // 2. Basic validation
-  if (!name || !email || !description) {
+  if (!name || !email || !message) {
     return res.status(400).json({ error: 'All fields are required.' });
   }
 
@@ -32,7 +32,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <p>Thanks for getting in touch! I've received your message and will get back to you shortly.</p>
         <hr />
         <p><strong>Your message:</strong></p>
-        <p>${description}</p>
+        <p>${message}</p>
         <br />
         <p>Best,<br/>Your Name</p>
       `,
@@ -49,7 +49,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
         <p><strong>Message:</strong></p>
-        <p>${description}</p>
+        <p>${message}</p>
       `,
     });
 
