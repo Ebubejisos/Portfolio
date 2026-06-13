@@ -16,15 +16,16 @@ const Header = () => {
 	const handleScroll = () => {
 		const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-		if (scrollY > 300) {
+		if (scrollY > 450) {
 			setIsScrolled(true);
 		} else {
 			setIsScrolled(false);
 		}
 	};
 
-	const handleSubmit: FormEventHandler = (e) => {
+	const handleSearch: FormEventHandler = (e) => {
 		e.preventDefault();
+		alert('feature coming soon...');
 	};
 
 	useEffect(() => {
@@ -52,7 +53,7 @@ const Header = () => {
 					</button>
 
 					{/* Search form */}
-					<form action='#' className='search-bar' onSubmit={handleSubmit}>
+					<form action='#' className='search-bar' onSubmit={handleSearch}>
 						<input
 							type='text'
 							value={text}

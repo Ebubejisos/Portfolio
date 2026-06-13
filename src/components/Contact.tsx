@@ -35,10 +35,12 @@ const Contact = () => {
 		console.log('Response from server:', data);
 		setIsSending(false);
 		if (data.success) {
-			alert(`Message sent successfully!`);
+			alert(
+				`Hi ${name}, your message was sent successfully! Kindly check the provided email and spam folder for confirmation.`,
+			);
 			resetForm();
 		} else {
-			alert('Failed to send message. Please try again later.');
+			alert(`Failed to send message. Please try again later, ${name}`);
 			resetForm();
 		}
 	};
@@ -78,7 +80,7 @@ const Contact = () => {
 						</li>
 					</ul>
 					<div className='message-me'>
-						<p>Send me a message: </p>
+						<p>Send me an email: I respond within 24 hours 👌</p>
 						<form
 							action=''
 							className='message-form'
@@ -113,9 +115,8 @@ const Contact = () => {
 								aria-label='Send message'
 								disabled={isSending}
 							>
+								{isSending ? <span>Sending...</span> : <span>Send</span>}
 								<SendIcon />
-								<span>Send Message</span>
-								{isSending && <span>Sending...</span>}
 							</button>
 						</form>
 					</div>

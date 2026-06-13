@@ -19,7 +19,7 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 7rem;
 }
 
 .img-container{
@@ -29,6 +29,7 @@
   cursor: pointer;
   .img-frame{
     border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.537);
     max-width: 600px;
     height: 350px;
     background-color: $whiteTile;
@@ -37,7 +38,7 @@
     transition: box-shadow 0.1s ease-in-out;
     &:hover {
       opacity: 1;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.537);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.701);
     }
   }
   img {
@@ -92,15 +93,15 @@
     }
   }
   a.repo-link {
-    background-color: $indigo;
-    &:hover {
-    background-color: darken($indigo, 10%);
-    }
-  }
-  a.live-link {
     background-color: $primary;
     &:hover {
       background-color: darken($primary, 10%);
+    }
+  }
+  a.live-link {
+    background-color: $accent;
+    &:hover {
+      background-color: darken($accent, 1%);
     }
   }
 }
@@ -111,11 +112,12 @@
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
-    background-color: $indigo;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: $accent;
     color: $white;
     border: none;
     cursor: pointer;
-    animation: pulse 2s infinite;
+    animation: pulse 1.5s infinite;
   } 
 }
 @keyframes pulse {
@@ -213,9 +215,9 @@
 // MEDIA QUERIES
 @media screen and (max-width: 780px){
   .project {
-    @include flex(column, 10px);
     margin: 0px;
     padding: 0px;
+    gap: 2rem;
     &:nth-child(even) .img-container {
       justify-content: center;
       img {

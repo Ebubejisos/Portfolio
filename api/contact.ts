@@ -35,15 +35,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <p><strong>Your message:</strong></p>
         <p>${message}</p>
         <br />
-        <p>Best,<br/>Your Name</p>
+        <p>All the best,<br/>${name}</p>
       `,
     });
 
     // 4. Forward the submission TO you
     await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>', // same verified domain
-      to: 'anosykegideon@gmail.com',               // ← your real email
-      replyTo: email,                                     // lets you reply directly to the user
+      to: ['anosykegideon@gmail.com'],               // ← your real email
+      replyTo: [email],                                     // lets you reply directly to the user
       subject: `New message from ${name}`,
       html: `
         <h3>New Contact Form Submission</h3>

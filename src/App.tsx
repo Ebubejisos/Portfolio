@@ -10,15 +10,12 @@ import Portfolio from './components/Portfolio';
 function App() {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	useEffect(() => {
-		const handleLoad = () => {
+		// set a timeout to simulate loading time
+		const timer = setTimeout(() => {
 			setIsLoading(false);
-		};
-		if (document.readyState === 'complete') {
-			handleLoad();
-		} else {
-			window.addEventListener('load', handleLoad);
-			return () => window.removeEventListener('load', handleLoad);
-		}
+		}, 2000);
+
+		return () => clearTimeout(timer);
 	}, []);
 
 	return (

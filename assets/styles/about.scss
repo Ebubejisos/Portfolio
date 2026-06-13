@@ -35,7 +35,7 @@
   p.about-me{
     text-align: left;
     align-self: center;
-    border-left: 3px solid $indigo;
+    border-left: 3px solid $primary;
     padding-left: 10px;
     flex: 1;
     line-height: 2;
@@ -107,7 +107,7 @@
   }
 }
 .skill-name h4{
-  color: $indigo;
+  color: $primary;
 }
 
 div.progress-bar {
