@@ -13,6 +13,7 @@ const Contact = () => {
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
+	const [isSending, setIsSending] = useState<boolean>(false);
 
 	const resetForm = () => {
 		setName('');
@@ -22,7 +23,7 @@ const Contact = () => {
 	const handleSendMessage: FormEventHandler = async (e) => {
 		e.preventDefault();
 		// use fetch and post request to api/contact
-		const response = await fetch('/api/contact.ts', {
+		const response = await fetch('/api/contact', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -30,6 +31,8 @@ const Contact = () => {
 			body: JSON.stringify({ name, email, message }),
 		});
 		const data = await response.json();
+		console.log('Response from server:', data);
+		setIsSending(false);
 		if (data.success) {
 			alert(`Message sent successfully!`);
 			resetForm();
@@ -104,9 +107,14 @@ const Contact = () => {
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
 							></textarea>
-							<button type='submit' aria-label='Send message'>
+							<button
+								type='submit'
+								aria-label='Send message'
+								disabled={isSending}
+							>
 								<SendIcon />
 								<span>Send Message</span>
+								{isSending && <span>Sending...</span>}
 							</button>
 						</form>
 					</div>
