@@ -30,17 +30,32 @@ body {
 // HEADER STYLES
 .header {
   // background image with darker overlay
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.758)), url(../images/IMG_1642.JPG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 40%;
-  min-height: 700px;
+  // background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.758)), url(../images/IMG_1642.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position-y: 40%;
   position: relative;
+  min-height: 700px;
+    &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -9;
+  }
   @media screen and (max-width: 500px) {
     min-height: 300px;
   }
 }
-
+.header-backgroundImg {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -143,6 +158,7 @@ body {
   align-items: center;
   margin: 0 auto;
 }
+
 
 .hero h1 {
     font-size: 2rem;

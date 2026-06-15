@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import '../assets/styles/main.scss';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -6,23 +5,23 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Loader from './components/Loader';
 import Portfolio from './components/Portfolio';
+import useImagePreloader from './hooks/useImagePreloader';
+import bgImage from '../assets/images/IMG_1642.jpg';
+
+// Add all background and key images that must load before render
+
+const IMAGES_TO_PRELOAD = [
+	bgImage,
+	'../assets/images/stones.jpg',
+	// ...add more as needed
+];
 
 function App() {
-	const [isLoading, setIsLoading] = useState<boolean>(true);
-	useEffect(() => {
-		// set a timeout to simulate loading time
-		const timer = setTimeout(() => {
-			setIsLoading(false);
-		}, 2000);
-
-		return () => clearTimeout(timer);
-	}, []);
+	const { isLoading, progress } = useImagePreloader(IMAGES_TO_PRELOAD);
 
 	return (
 		<div className='container'>
-			{/* add a loader component that displays while images are loading */}
-
-			{isLoading && <Loader />}
+			{isLoading && <Loader progress={progress} />}
 			{!isLoading && (
 				<>
 					<Header />

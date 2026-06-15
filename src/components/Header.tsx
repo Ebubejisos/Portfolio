@@ -6,6 +6,7 @@ import HamburgerMenu from './HamburgerMenu';
 /// <reference types="vite-plugin-svgr/client" />
 import MenuIcon from '../../assets/icons/menu.svg?react';
 import CloseMenuIcon from '../../assets/icons/close.svg?react';
+import heroImg from '../../assets/images/IMG_1642.jpg';
 
 const Header = () => {
 	// useState
@@ -39,6 +40,7 @@ const Header = () => {
 	return (
 		<>
 			<header className='header'>
+				<img src={heroImg} alt='Hero Image' className='header-backgroundImg' />
 				<div
 					className={`header-container ${isScrolled ? 'scroll-animation' : ''}`}
 				>

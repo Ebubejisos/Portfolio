@@ -3,49 +3,36 @@ import '../../assets/styles/loader.scss';
 
 interface LoaderProps {
 	message?: string;
+	progress?: number;
 }
 
-const Loader: React.FC<LoaderProps> = ({ message = 'Loading assets...' }) => {
+const Loader: React.FC<LoaderProps> = ({
+	message = 'Loading...',
+	progress,
+}) => {
 	return (
-		<div style={containerStyle}>
-			<div style={spinnerStyle} />
-			<p style={textStyle}>{message}</p>
-			<style>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      `}</style>
+		<div className='loader'>
+			<div className='loader__content'>
+				<div className='loader__spinner'>
+					<div className='loader__spinner-ring' />
+					<div className='loader__spinner-ring' />
+					<div className='loader__spinner-ring' />
+				</div>
+
+				<p className='loader__message'>{message}</p>
+
+				{progress !== undefined && (
+					<div className='loader__progress'>
+						<div
+							className='loader__progress-bar'
+							style={{ width: `${progress}%` }}
+						/>
+						<span className='loader__progress-label'>{progress}%</span>
+					</div>
+				)}
+			</div>
 		</div>
 	);
-};
-
-const containerStyle: React.CSSProperties = {
-	display: 'flex',
-	flexDirection: 'column',
-	alignItems: 'center',
-	justifyContent: 'center',
-	width: '100%',
-	height: '100vh',
-	backgroundColor: 'rgba(0, 0, 0, 0.65)',
-	color: '#ffffff',
-	padding: '1rem',
-	boxSizing: 'border-box',
-};
-
-const spinnerStyle: React.CSSProperties = {
-	width: '60px',
-	height: '60px',
-	border: '6px solid rgba(255, 255, 255, 0.3)',
-	borderTopColor: '#ffffff',
-	borderRadius: '50%',
-	animation: 'spin 1s linear infinite',
-};
-
-const textStyle: React.CSSProperties = {
-	marginTop: '1rem',
-	fontSize: '1rem',
-	textAlign: 'center',
 };
 
 export default Loader;
