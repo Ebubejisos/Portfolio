@@ -26,29 +26,34 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     await resend.emails.send({
       from: 'Gideon Portfolio <noreply@codergidingz.xyz>',  // ← must be your verified Resend domain
       to: [email],
-      replyTo: ['anosykegideon@getMaxListeners.com'],
+      replyTo: ['anosykegideon@gmail.com'],
       subject: 'Thanks for reaching out!',
       html: `
-        <p>Hi ${name},</p>
-        <p>Thanks for getting in touch! I've received your message and will get back to you shortly.</p>
-        <hr />
-        <p><strong>Your message:</strong></p>
-        <p>${message}</p>
-        <br />
-        <p>All the best,<br/>${name}</p>
+        <p>Hello ${name},</p>
+
+        <p>Thank you for reaching out through my portfolio website.</p>
+
+        <p>I have received your message and will get back to you shortly.</p>
+
+        <blockquote>
+          ${message}
+        </blockquote>
+
+        <p>Best regards,<br />
+        Gideon Anosike</p>
       `,
     });
 
     // 4. Forward the submission TO you
     await resend.emails.send({
-      from: 'Contact Portfolio <codergidingz.xyz>', // same verified domain
+      from: 'Portfolio <noreply@codergidingz.xyz>', // same verified domain
       to: ['anosykegideon@gmail.com'],               // ← your real email
       replyTo: [email],                                     // lets you reply directly to the user
       subject: `New message from ${name}`,
       html: `
-        <h3>New Contact Form Submission</h3>
+        <h2>New Contact Message</h2>
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
