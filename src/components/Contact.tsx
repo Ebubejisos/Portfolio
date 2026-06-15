@@ -23,7 +23,12 @@ const Contact = () => {
 	const handleSendMessage: FormEventHandler = async (e) => {
 		e.preventDefault();
 		setIsSending(true);
-		// use fetch and post request to api/contact
+		// check if form fields are all filled
+		if (name === '' || email === '' || message === '') {
+			alert('Some fields are empty! Kindly fill up all form fields provided');
+			return;
+		}
+
 		const response = await fetch('/api/contact', {
 			method: 'POST',
 			headers: {
@@ -32,7 +37,7 @@ const Contact = () => {
 			body: JSON.stringify({ name, email, message }),
 		});
 		const data = await response.json();
-		console.log('Response from server:', data);
+
 		setIsSending(false);
 		if (data.success) {
 			alert(
@@ -40,7 +45,7 @@ const Contact = () => {
 			);
 			resetForm();
 		} else {
-			alert(`Failed to send message. Please try again later, ${name}`);
+			alert(`${data.error}`);
 			resetForm();
 		}
 	};
