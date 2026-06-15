@@ -26,6 +26,7 @@ const Contact = () => {
 		// check if form fields are all filled
 		if (name === '' || email === '' || message === '') {
 			alert('Some fields are empty! Kindly fill up all form fields provided');
+			setIsSending(false);
 			return;
 		}
 
