@@ -169,7 +169,7 @@
   }      
 }
 .modal .close-modal {
-  background-color: $indigo;
+  background-color: $brickRed;
   color: $white;
   padding: 0.5em 1em;
   border: none;
@@ -178,7 +178,7 @@
   transition: background-color,transform 0.2s ease-in-out;
   &:hover {
     transform: scale(0.95);
-    background-color: darken($indigo, 10%);
+    background-color: darken($brickRed, 10%);
   }
 }
 .modal .close-modal-times {
@@ -188,7 +188,7 @@
   background: none;
   border: none;
   font-size: 2em;
-  color: $indigo;
+  color: $brickRed;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   // make it spin on hover and scale up a bit

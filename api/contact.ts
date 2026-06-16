@@ -21,7 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Invalid email address.' });
   }
 
-  // User html
+  // Email to Owner html
   const ownerEmailHtml: string = `
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <p style="margin:0; font-size:12px; font-weight:600; color:#6366f1; letter-spacing:2px; text-transform:uppercase;">
+                    <p style="margin:0; font-size:12px; font-weight:600; color:#ffa500; letter-spacing:2px; text-transform:uppercase;">
                       New Message
                     </p>
                     <h2 style="margin:6px 0 0; color:#ffffff; font-size:22px; font-weight:700;">
@@ -50,7 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                     </h2>
                   </td>
                   <td align="right">
-                    <span style="display:inline-block; background:#6366f1; color:#fff;
+                    <span style="display:inline-block; background:#ffa500; color:#fff;
                                  font-size:11px; font-weight:700; padding:6px 14px;
                                  border-radius:20px; letter-spacing:1px; text-transform:uppercase;">
                       New Lead
@@ -91,7 +91,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               </p>
               <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:32px;">
                 <tr>
-                  <td style="background:#f9fafb; border:1px solid #e5e7eb; border-left:4px solid #6366f1;
+                  <td style="background:#f9fafb; border:1px solid #e5e7eb; border-left:4px solid #393f4d;
                               border-radius:0 8px 8px 0; padding:20px;">
                     <p style="margin:0; font-size:15px; line-height:1.8; color:#374151;">
                       ${message}
@@ -105,7 +105,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 <tr>
                   <td align="center">
                     <a href="mailto:${email}?subject=Re: Your message&body=Hi ${name},"
-                       style="display:inline-block; background:#6366f1; color:#ffffff; text-decoration:none;
+                       style="display:inline-block; background:#ffa500; color:#ffffff; text-decoration:none;
                               font-size:15px; font-weight:600; padding:14px 36px;
                               border-radius:8px; letter-spacing:0.3px;">
                       Reply to ${name} →
@@ -121,7 +121,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <tr>
             <td style="background:#f9fafb; padding:20px 40px; border-radius:0 0 12px 12px; border-top:1px solid #e5e7eb;">
               <p style="margin:0; font-size:12px; color:#9ca3af; text-align:center;">
-                Sent from your portfolio contact form • yourportfolio.vercel.app
+                Sent from your portfolio contact form • codergidingz.xyz
               </p>
             </td>
           </tr>
@@ -134,7 +134,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 </body>
 </html>
 `;
-  // Sender html
+  // Email to User html
   const userEmailHtml: string = `
 <!DOCTYPE html>
 <html>
@@ -153,8 +153,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <!-- HEADER -->
           <tr>
             <td align="center" style="background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%); padding: 40px 40px 30px; border-radius: 12px 12px 0 0;">
-              <h1 style="margin:0; color:#ffffff; font-size:28px; font-weight:700; letter-spacing:-0.5px;">
-                Your Name
+              <h1 style="margin:0; color:#ffa500; font-size:28px; font-weight:700; letter-spacing:-0.5px;">
+                Gideon E.
               </h1>
               <p style="margin:8px 0 0; color:#a0a0b0; font-size:14px; letter-spacing:2px; text-transform:uppercase;">
                 Portfolio
@@ -183,7 +183,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               </p>
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td style="background:#f9fafb; border-left:3px solid #6366f1; border-radius:0 8px 8px 0; padding:16px 20px;">
+                  <td style="background:#f9fafb; border-left:3px solid #ffa500; border-radius:0 8px 8px 0; padding:16px 20px;">
                     <p style="margin:0; font-size:15px; line-height:1.7; color:#374151;">
                       ${message}
                     </p>
@@ -195,8 +195,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:32px;">
                 <tr>
                   <td align="center">
-                    <a href="https://yourportfolio.vercel.app"
-                       style="display:inline-block; background:#6366f1; color:#ffffff; text-decoration:none;
+                    <a href="www.codergidingz.xyz"
+                       style="display:inline-block; background:#6366f1; color:#ffa500; text-decoration:none;
                               font-size:15px; font-weight:600; padding:14px 32px; border-radius:8px;
                               letter-spacing:0.3px;">
                       View My Portfolio →
@@ -213,7 +213,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             <td style="background:#f9fafb; padding:24px 40px; border-radius:0 0 12px 12px; border-top:1px solid #e5e7eb;">
               <p style="margin:0; font-size:13px; color:#9ca3af; text-align:center; line-height:1.6;">
                 You're receiving this because you submitted a contact form at
-                <a href="https://yourportfolio.vercel.app" style="color:#6366f1; text-decoration:none;">yourportfolio.vercel.app</a><br/>
+                <a href="www.codergidingz.xyz" style="color:#6366f1; text-decoration:none;">codergidingz.xyz</a><br/>
                 If this wasn't you, you can safely ignore this email.
               </p>
             </td>

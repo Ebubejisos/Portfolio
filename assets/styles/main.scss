@@ -29,18 +29,13 @@ body {
 }
 // HEADER STYLES
 .header {
-  // background image with darker overlay
-  // background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.758)), url(../images/IMG_1642.jpg);
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position-y: 40%;
   position: relative;
   min-height: 700px;
     &::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.623);
     z-index: -9;
   }
   @media screen and (max-width: 500px) {
