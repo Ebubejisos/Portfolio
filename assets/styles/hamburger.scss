@@ -10,6 +10,7 @@
   background: transparentize($color: $primary, $amount: 0.6);
   z-index: 10;
   backdrop-filter: blur(5px);
+  transition: transform .4s ease-out, opacity .3s ease-in;
 }
 
 .burger-nav-list {
@@ -34,7 +35,7 @@
   svg {
     width: 1.12em;
     height: 1.12em;
-    fill: #ddeafb;
+    fill: $accent;
   }
   &:hover {
     transform: scale(.96);  
@@ -43,14 +44,11 @@
 
 // ANIMATION CLASSES
 .animate-in {
-  animation: nav-animation 300ms ease-in  forwards ;
+  transform: translateY(0);
 }
 
-@keyframes nav-animation {
-  from {
-    transform: translateY(-50%);
-  }
-  to {
-    transform: translateY(0%);
-  }
+
+.animate-out {
+  transform: translateY(-105%);
+  opacity: 0;
 }

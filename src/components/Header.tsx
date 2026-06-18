@@ -45,14 +45,14 @@ const Header = () => {
 					className={`header-container ${isScrolled ? 'scroll-animation' : ''}`}
 				>
 					<Nav />
-					{isMenuOpen && <HamburgerMenu isMenuOpen={isMenuOpen} />}
 					{/* Mobile Hamburger Menu */}
 					<button
-						className={`hamburger-btn ${isScrolled ? 'white' : 'white'}`}
+						className='hamburger-btn'
 						onClick={() => setIsMenuOpen((prevState) => !prevState)}
 					>
 						{isMenuOpen ? <CloseMenuIcon /> : <MenuIcon />}
 					</button>
+					<HamburgerMenu isMenuOpen={isMenuOpen} />
 
 					{/* Search form */}
 					<form action='#' className='search-bar' onSubmit={handleSearch}>
