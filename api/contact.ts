@@ -196,7 +196,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 <tr>
                   <td align="center">
                     <a href="www.codergidingz.xyz"
-                       style="display:inline-block; background:#6366f1; color:#ffa500; text-decoration:none;
+                       style="display:inline-block; background:#ffa500; color:#ffffff; text-decoration:none;
                               font-size:15px; font-weight:600; padding:14px 32px; border-radius:8px;
                               letter-spacing:0.3px;">
                       View My Portfolio →
