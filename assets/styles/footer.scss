@@ -2,30 +2,30 @@
 
 
 .footer {
-  margin: 0 auto;
-  padding: 20px;
+  padding: 10px 0;
   color: $white;
   min-height: 150px;
-  background-color: $black;
-}
-.back-to-top {
-  transition: transform 0.3s ease-in;
-  &:hover {
-    transform: scale(0.95);
-  }
-}
-.top-btn {
-  padding: 0.7rem 1.2rem;
-  background-color: $indigo;
-  border-radius: 5px;
-  color: $white;
-  text-decoration: none;
+  background-color: $primary;
 }
 
 .social-media-links {
+  margin: 0 auto;
+  display: flex;
+  max-width: 500px;
+  justify-content: space-around;
   list-style-type: none;
+  svg {
+   width: 1.5rem;
+   height: 1.5rem;
+   fill: $white;
+   transition: transform .2s ease-in-out;
+   &:hover {
+    transform: scale(1.2);
+   }
+ }
 }
 .reference-lists {
+  margin: 40px;
   list-style-type: none;
   a{
     color: $white;
@@ -33,13 +33,12 @@
 }
 
 .copyrights {
-  margin-top: 20px;
   display: flex;
   gap: 5px;
   justify-content: center;
   svg {
-    width: 1.12em;
-    height: 1.12em;
-    fill: $white;
-  }
+  width: 1.12em;
+  height: 1.12em;
+  fill: $white;
+}
 }

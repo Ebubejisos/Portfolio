@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 
 /// <reference types="vite-plugin-svgr/client" />
 import GithubIcon from '../../assets/icons/github.svg?react';
-
+import LinkedInIcon from '../../assets/icons/linkedin.svg?react';
+import EmailIcon from '../../assets/icons/email.svg?react';
 import '../../assets/styles/footer.scss';
+
 import { openLinksInNewTab } from '../utils/functions';
 
 const Footer = () => {
@@ -16,23 +18,18 @@ const Footer = () => {
 			<div>
 				<ul className='social-media-links'>
 					<li>
-						<a href=''>
-							<img src='' alt='' />
+						<a href='https://github.com/Ebubejisos'>
+							<GithubIcon />
 						</a>
 					</li>
 					<li>
-						<a href=''>
-							<img src='' alt='' />
+						<a href='https://www.linkedin.com/in/gideon-anosike/'>
+							<LinkedInIcon />
 						</a>
 					</li>
 					<li>
-						<a href=''>
-							<img src='' alt='' />
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<img src='' alt='' />
+						<a href='mailto:anosykegideon@gmail.com'>
+							<EmailIcon />
 						</a>
 					</li>
 				</ul>

@@ -97,7 +97,7 @@ body {
   svg {    
     width: 1.12em;
     height: calc(var(--font-size) * 1.12);//same with writing 1.12em as in width
-    fill: $accent;
+    fill: #ffc04b;
     transition: fill,transform 400ms ease-in-out;
   }
   
@@ -129,7 +129,7 @@ body {
     opacity: .9;
   }
   button {
-    background-color: $accent;
+    background-color: #ffc04b;
     color: $primary;
     padding: 0px 5px;
     cursor: pointer;
@@ -258,10 +258,8 @@ body {
     svg {
       width: 1.5em;
       height: 1.5em;
+      fill: white;
     }
-  }
-  .white svg{
-    fill: white;
   }
   
 }
